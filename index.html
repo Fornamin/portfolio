@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>김민정 | PORTFOLIO</title>
+    <meta name="description" content="성능, 신뢰성, 확장성을 고려하는 백엔드 & 풀스택 개발자 김민정의 포트폴리오입니다.">
+    
+    <!-- Premium Font (Chillax & Inter) -->
+    <link href="https://api.fontshare.com/v2/css?f[]=chillax@200,300,400,500,600,700,1&family=Inter:wght@200;300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;300;400;500;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Lenis Smooth Scroll CDN -->
+    <script src="https://unpkg.com/@studio-freight/lenis@1.0.36/dist/lenis.min.js"></script>
+    
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Radial Interactive Grid Background Canvas (Visible on main page only) -->
+    <canvas id="radial-grid-canvas"></canvas>
+
+    <!-- Header Navigation -->
+    <header class="header">
+        <div class="header-container">
+            <a href="#about" class="logo">MINJUNG<span class="dot">.</span></a>
+            <nav class="nav">
+                <a href="#about" class="nav-link active"><span>ABOUT</span></a>
+                <a href="#skills" class="nav-link"><span>SKILLS</span></a>
+                <a href="#projects" class="nav-link"><span>WORKS</span></a>
+                <a href="#experience" class="nav-link"><span>STRENGTHS</span></a>
+            </nav>
+            <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fa-solid fa-moon"></i>
+                </button>
+                <a href="mailto:alswjd@example.com" class="link-animate">CONTACT <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="about" class="hero-section">
+            <div class="hero-layout">
+                <div class="hero-headline">
+                    <h1 class="hero-title">
+                        <span>WE DESIGN</span>
+                        <span>THE SYSTEM</span>
+                        <span>OF STABILITY.</span>
+                    </h1>
+                </div>
+                
+                <div class="hero-intro">
+                    <div class="intro-num">01 / PROFILE</div>
+                    <p class="intro-p">
+                        안녕하세요, 인프라 감각을 갖춘 백엔드 및 풀스택 개발자 김민정입니다. 
+                        단순한 기능의 나열을 넘어 서비스가 안정적으로 구동될 수 있도록 성능, 신뢰성, 
+                        그리고 확장성을 우선적으로 고민하는 아키텍처를 지향합니다.
+                    </p>
+                    <p class="intro-p">
+                        데이터베이스 정규화와 pgvector 벡터 검색 RAG 파이프라인 설계에 강점이 있으며, 
+                        프로덕션 환경의 성능 문제를 해결하기 위해 Redis 캐싱 벤치마킹 등 정량적 수치를 
+                        기반으로 트레이드오프를 평가합니다.
+                    </p>
+                    <div class="hero-links">
+                        <a href="https://github.com" target="_blank" class="btn-minimal">GITHUB <i class="fab fa-github"></i></a>
+                        <a href="#skills" class="btn-minimal">VIEW WORKS <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="section-divider"></div>
+
+        <!-- Tech Stack Section -->
+        <section id="skills" class="skills-section page-section">
+            <div class="section-header">
+                <span class="section-num">02</span>
+                <h2 class="section-title">ENGINEERING CAPABILITIES</h2>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-column">
+                    <div class="column-header">
+                        <h3>BACKEND & DB</h3>
+                        <span class="sub-num">A</span>
+                    </div>
+                    <div class="skill-body">
+                        <p class="skill-desc">
+                            Spring Boot와 FastAPI를 통한 안정적인 REST API 인프라를 설계하며, 데이터 일관성 및 정규화 구조를 수립합니다.
+                        </p>
+                        <div class="tags-container">
+                            <span class="tag-pill">Spring Boot</span>
+                            <span class="tag-pill">FastAPI</span>
+                            <span class="tag-pill">PostgreSQL</span>
+                            <span class="tag-pill">pgvector</span>
+                            <span class="tag-pill">Redis</span>
+                            <span class="tag-pill">MySQL</span>
+                            <span class="tag-pill">Java</span>
+                            <span class="tag-pill">Python</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-column">
+                    <div class="column-header">
+                        <h3>AI & DEVOP</h3>
+                        <span class="sub-num">B</span>
+                    </div>
+                    <div class="skill-body">
+                        <p class="skill-desc">
+                            Docker 컨테이너 격리를 통한 안전한 컴파일 샌드박스를 구축하고, Kafka 신뢰성 이벤트 계층을 설계하여 자동 데이터 동기화 시스템을 운영합니다.
+                        </p>
+                        <div class="tags-container">
+                            <span class="tag-pill">Docker</span>
+                            <span class="tag-pill">Docker Compose</span>
+                            <span class="tag-pill">Kafka</span>
+                            <span class="tag-pill">LLM API</span>
+                            <span class="tag-pill">RAG Embeddings</span>
+                            <span class="tag-pill">Nginx</span>
+                            <span class="tag-pill">Cloudflare R2</span>
+                            <span class="tag-pill">EC2</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-column">
+                    <div class="column-header">
+                        <h3>FRONTEND & COLLAB</h3>
+                        <span class="sub-num">C</span>
+                    </div>
+                    <div class="skill-body">
+                        <p class="skill-desc">
+                            Next.js와 TypeScript 기반의 고성능 반응형 UI를 구축하고, Git Flow 및 Swagger 문서화를 통해 개발 조직의 협업 생산성을 향상시킵니다.
+                        </p>
+                        <div class="tags-container">
+                            <span class="tag-pill">React</span>
+                            <span class="tag-pill">TypeScript</span>
+                            <span class="tag-pill">Next.js</span>
+                            <span class="tag-pill">Zustand</span>
+                            <span class="tag-pill">Tailwind CSS</span>
+                            <span class="tag-pill">Git Flow</span>
+                            <span class="tag-pill">Swagger</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="section-divider"></div>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="projects-section page-section">
+            <div class="section-header">
+                <span class="section-num">03</span>
+                <h2 class="section-title">SELECTED WORKS</h2>
+            </div>
+
+            <div class="project-list">
+                <!-- Project Row 1: Linea -->
+                <div class="project-row" data-project="linea">
+                    <div class="row-left">
+                        <span class="row-index">01</span>
+                        <span class="row-category">FULL-STACK / RAG CHATBOT</span>
+                    </div>
+                    <div class="row-center">
+                        <h3 class="row-title">Linea</h3>
+                    </div>
+                    <div class="row-right">
+                        <span class="row-status animate-status">IN PROGRESS</span>
+                        <span class="row-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+                    
+                    <!-- Expandable Info Box -->
+                    <div class="project-detail-box">
+                        <div class="detail-grid">
+                            <div class="detail-desc">
+                                <h4>OVERVIEW</h4>
+                                <p>PDF, CSV, XLSX, TXT 문서를 업로드하고 LLM 기반 검색 및 편집이 가능한 풀스택 플랫폼입니다. Cloudflare R2 스토리지 업로드 이벤트 시 pgvector 임베딩과 연계하여 데이터를 파이싱 및 메타데이터화합니다.</p>
+                            </div>
+                            <div class="detail-achievements">
+                                <h4>ENGINEERING POINTS</h4>
+                                <ul>
+                                    <li>Kafka 메시지 큐 기반 R2-to-pgvector 재임베딩 실시간 자동 동기화 보장 레이어 구축</li>
+                                    <li>LLM이 제안한 문서 변경 건에 대하여 사용자 피드백 컨펌 레이어를 추가해 오작동 및 오답 사전 차단</li>
+                                    <li>각 문서 포맷별 최적의 Chunking 및 데이터 패칭 파이프라인 최적화</li>
+                                </ul>
+                            </div>
+                            <div class="detail-tech">
+                                <h4>STACK</h4>
+                                <div class="detail-tags">
+                                    <span>Next.js</span><span>FastAPI</span><span>PostgreSQL</span><span>pgvector</span><span>Kafka</span><span>Docker</span><span>R2</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Row 2: Online Judge -->
+                <div class="project-row" data-project="judge">
+                    <div class="row-left">
+                        <span class="row-index">02</span>
+                        <span class="row-category">BACKEND / SECURE SANDBOX</span>
+                    </div>
+                    <div class="row-center">
+                        <h3 class="row-title">Online Judge</h3>
+                    </div>
+                    <div class="row-right">
+                        <span class="row-status">COMPLETED</span>
+                        <span class="row-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+
+                    <div class="project-detail-box">
+                        <div class="detail-grid">
+                            <div class="detail-desc">
+                                <h4>OVERVIEW</h4>
+                                <p>사용자가 제출한 임의의 프로그래밍 코드를 웹에서 빌드하고 안전하게 실행하여 정답 여부를 판별하는 온라인 저지 엔진 플랫폼입니다.</p>
+                            </div>
+                            <div class="detail-achievements">
+                                <h4>ENGINEERING POINTS</h4>
+                                <ul>
+                                    <li>Docker 기반 Sandbox 환경 설계: 각 제출마다 독립적인 일회성 컨테이너를 가동하여 호스트 서버의 리소스 격리 및 악성 코드 방어</li>
+                                    <li>다양한 개발 언어 확장을 수용할 수 있도록 컴파일러 및 런타임 채점 파이프라인의 추상 구조화 구현</li>
+                                    <li>대규모 제출 데이터를 효율적으로 영속화하고 이력을 영구 추적 가능한 관계형 데이터 구조 설계</li>
+                                </ul>
+                            </div>
+                            <div class="detail-tech">
+                                <h4>STACK</h4>
+                                <div class="detail-tags">
+                                    <span>Spring Boot</span><span>Java</span><span>Docker</span><span>PostgreSQL</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Row 3: 동아리 홈페이지 -->
+                <div class="project-row" data-project="club">
+                    <div class="row-left">
+                        <span class="row-index">03</span>
+                        <span class="row-category">FULL-STACK / PERFORMANCE</span>
+                    </div>
+                    <div class="row-center">
+                        <h3 class="row-title">동아리 홈페이지</h3>
+                    </div>
+                    <div class="row-right">
+                        <span class="row-status">COMPLETED</span>
+                        <span class="row-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+
+                    <div class="project-detail-box">
+                        <div class="detail-grid">
+                            <div class="detail-desc">
+                                <h4>OVERVIEW</h4>
+                                <p>동아리 구성원을 위한 소통용 커뮤니티 웹 서비스입니다. JWT 기반 인증 구조 하에 계층형 댓글 모델을 지탱하며, Redis 캐시 계층 도입으로 실측 성능을 보완했습니다.</p>
+                            </div>
+                            <div class="detail-achievements">
+                                <h4>ENGINEERING POINTS</h4>
+                                <ul>
+                                    <li>Redis 기반 조회수 캐싱 계층 구현: 데이터베이스 디렉트 조회 부하를 완화하고 API 지연 연산 및 응답 대기 시간을 기존 대비 6배 단축</li>
+                                    <li>JWT 기반의 세션 상태 관리 및 만료 제어 로직 설계를 통한 클라이언트 정보 보호 보안 고도화</li>
+                                    <li>데이터 정규화를 거친 계층적 댓글 구조 설계 및 React 기반 반응형 커뮤니티 피드백 화면 연계</li>
+                                </ul>
+                            </div>
+                            <div class="detail-tech">
+                                <h4>STACK</h4>
+                                <div class="detail-tags">
+                                    <span>React</span><span>Spring Boot</span><span>Redis</span><span>PostgreSQL</span><span>JWT</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Row 4: Kafka Optimization -->
+                <div class="project-row" data-project="kafka">
+                    <div class="row-left">
+                        <span class="row-index">04</span>
+                        <span class="row-category">RESEARCH / NETWORK IPC</span>
+                    </div>
+                    <div class="row-center">
+                        <h3 class="row-title">Kafka IPC 연구</h3>
+                    </div>
+                    <div class="row-right">
+                        <span class="row-status">RESEARCHED</span>
+                        <span class="row-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+
+                    <div class="project-detail-box">
+                        <div class="detail-grid">
+                            <div class="detail-desc">
+                                <h4>OVERVIEW</h4>
+                                <p>대학 연구 프로젝트의 일환으로 Kafka 트랜스포트 레이어를 네트워크 계층에서 OS 레벨 공유 메모리 통신으로 전환하여 비교 벤치마크를 수행한 연구입니다.</p>
+                            </div>
+                            <div class="detail-achievements">
+                                <h4>ENGINEERING POINTS</h4>
+                                <ul>
+                                    <li>JNI(Java Native Interface) 브릿지를 활용하여 Java 계층과 C 계층간 DirectBuffer 공유 메모리 결합 구조 개발</li>
+                                    <li>Ring Buffer 패턴의 메시지 큐 통신을 도입하여 커널 네트워크 스택 오버헤드 완화 모의 실험 수행</li>
+                                    <li>실측 분석: 기대했던 이점이 안전성 추가 오버헤드로 인해 특정 케이스에서 다소 상쇄되는 한계를 정량적으로 밝혀 무조건적 도입 대신 정확한 트레이드오프 근거를 도출</li>
+                                </ul>
+                            </div>
+                            <div class="detail-tech">
+                                <h4>STACK</h4>
+                                <div class="detail-tags">
+                                    <span>Java</span><span>C</span><span>JNI</span><span>DirectBuffer</span><span>Kafka</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project Row 5: Survey App -->
+                <div class="project-row" data-project="survey">
+                    <div class="row-left">
+                        <span class="row-index">05</span>
+                        <span class="row-category">ANDROID / CLIENT CONTRACT</span>
+                    </div>
+                    <div class="row-center">
+                        <h3 class="row-title">중앙대 간호대학원</h3>
+                    </div>
+                    <div class="row-right">
+                        <span class="row-status">COMPLETED</span>
+                        <span class="row-arrow"><i class="fa-solid fa-arrow-right-long"></i></span>
+                    </div>
+
+                    <div class="project-detail-box">
+                        <div class="detail-grid">
+                            <div class="detail-desc">
+                                <h4>OVERVIEW</h4>
+                                <p>간호대학원의 설문 연구 데이터 수집 및 분석을 돕기 위해 의뢰 받아 개발한 외부 클라이언트 납품용 모바일 수집 앱 서비스입니다.</p>
+                            </div>
+                            <div class="detail-achievements">
+                                <h4>ENGINEERING POINTS</h4>
+                                <ul>
+                                    <li>사용성 최우선 UI 설계: 설문 응답 과정이 무겁지 않게 반응형 모바일 디자인 가이드 준수</li>
+                                    <li>Firebase 클라우드 연동을 통해 데이터 유실 리스크를 차단하고 안전하게 수집 서버 데이터 파이프라인 구성</li>
+                                    <li>설정 요구사항 분석부터 테스트 케이스 반영 및 패키징 릴리즈 배포 납품의 전체 사이클 리드</li>
+                                </ul>
+                            </div>
+                            <div class="detail-tech">
+                                <h4>STACK</h4>
+                                <div class="detail-tags">
+                                    <span>Android Studio</span><span>Java</span><span>Firebase</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Divider -->
+        <div class="section-divider"></div>
+
+        <!-- Key Strengths Section -->
+        <section id="experience" class="strengths-section page-section">
+            <div class="section-header">
+                <span class="section-num">04</span>
+                <h2 class="section-title">CORE PHILOSOPHY</h2>
+            </div>
+
+            <div class="philosophy-layout">
+                <div class="philosophy-statement">
+                    <h3>성능과 신뢰성,<br>수치로 증명합니다.</h3>
+                </div>
+                <div class="philosophy-details">
+                    <div class="p-item">
+                        <h4>01. 데이터 중심의 안정성</h4>
+                        <p>애플리케이션 비즈니스 요구사항을 수용하기에 앞서, 적확한 정규화 설계와 캐시 레이어를 도입하여 응답 속도 향상과 DB 락 현상을 최소화합니다.</p>
+                    </div>
+                    <div class="p-item">
+                        <h4>02. 격리와 모니터링</h4>
+                        <p>위험을 격리하는 컨테이너 Sandbox, 재도전을 보장하는 Kafka 복구 등 예외적 장애 발생 상황을 통제 가능한 범위로 유지하는 설계를 합니다.</p>
+                    </div>
+                    <div class="p-item">
+                        <h4>03. 현업의 트레이드오프 파악</h4>
+                        <p>맹목적인 기술 찬양이나 불필요한 아키텍처 비대화를 지양하고, 시스템 부하 실측과 성능 수치를 기반으로 합리적인 개발 방향성을 의사결정합니다.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-layout">
+            <div class="footer-left">
+                <h2 class="footer-brand">MINJUNG<span class="dot">.</span></h2>
+                <p class="footer-tag">BACKEND & FULL-STACK SYSTEM DESIGNER</p>
+            </div>
+            <div class="footer-right">
+                <div class="footer-links">
+                    <a href="https://github.com" target="_blank" class="link-animate">GITHUB</a>
+                    <a href="mailto:alswjd@example.com" class="link-animate">EMAIL</a>
+                </div>
+                <p class="footer-copy">&copy; 2026 Minjung Kim. Designed for High Performance.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="index.js"></script>
+</body>
+</html>

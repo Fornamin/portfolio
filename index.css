@@ -75,9 +75,11 @@ body {
 /* Section Dividers */
 .section-divider {
     width: 100%;
-    height: 1px;
-    background-color: var(--border-color);
-    transition: background-color 0.4s ease;
+    height: 0;
+    border-top: 1px solid var(--border-color);
+    position: relative;
+    z-index: 1;
+    transition: border-color 0.4s ease;
 }
 
 /* Header */
@@ -309,7 +311,7 @@ section {
 }
 
 .skill-column {
-    padding: 3rem 2rem 3rem 0;
+    padding: 3rem 2rem;
     border-right: 1px solid var(--border-color);
 }
 
@@ -397,8 +399,9 @@ section {
 
 .row-index {
     font-family: var(--font-heading);
-    font-size: 0.85rem;
-    color: var(--text-muted);
+    font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+    color: var(--text-secondary);
+    font-weight: 500;
 }
 
 .row-category {
@@ -413,7 +416,7 @@ section {
 
 .row-title {
     font-family: var(--font-heading);
-    font-size: clamp(1.5rem, 4vw, 3rem);
+    font-size: clamp(1.3rem, 3.2vw, 2.2rem);
     font-weight: 500;
     letter-spacing: -0.02em;
     transition: var(--transition-medium);
@@ -484,16 +487,16 @@ section {
 
 .detail-grid h4 {
     font-family: var(--font-heading);
-    font-size: 0.75rem;
+    font-size: 0.8rem;
     color: var(--text-muted);
     letter-spacing: 0.1em;
     margin-bottom: 1rem;
 }
 
 .detail-grid p {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.7;
 }
 
 .detail-grid ul {
@@ -501,9 +504,9 @@ section {
 }
 
 .detail-grid li {
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     color: var(--text-secondary);
-    line-height: 1.6;
+    line-height: 1.7;
     margin-bottom: 0.5rem;
     position: relative;
     padding-left: 1rem;
@@ -523,7 +526,7 @@ section {
 }
 
 .detail-tags span {
-    font-size: 0.7rem;
+    font-size: 0.75rem;
     color: var(--text-primary);
     border: 1px solid var(--border-color);
     padding: 0.15rem 0.5rem;
@@ -620,6 +623,16 @@ section {
 .footer-copy {
     font-size: 0.7rem;
     color: var(--text-muted);
+}
+
+/* Solid Background for Sections Below Hero to hide the fixed canvas */
+.skills-section,
+.projects-section,
+.footer {
+    background-color: var(--bg-color);
+    position: relative;
+    z-index: 1;
+    transition: background-color 0.4s ease;
 }
 
 /* Responsive Grid Adapters */

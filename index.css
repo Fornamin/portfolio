@@ -391,7 +391,7 @@ section {
 }
 
 .row-left {
-    width: 25%;
+    width: 22%;
     display: flex;
     align-items: center;
     gap: 2rem;
@@ -411,7 +411,7 @@ section {
 }
 
 .row-center {
-    width: 50%;
+    width: 60%;
 }
 
 .row-title {
@@ -428,7 +428,7 @@ section {
 }
 
 .row-right {
-    width: 25%;
+    width: 18%;
     display: flex;
     justify-content: space-between;
     align-items: center;
